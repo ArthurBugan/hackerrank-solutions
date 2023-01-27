@@ -1,0 +1,30 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "![image](img/screencapture-hackerrank-challenges-mini-max-sum-problem-2023-01-27-17_58_06.png)"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function miniMaxSum(arr) {\n  let ordered = arr.sort((a, b) => a - b);\n  let min = 0;\n  let max = 0;\n  let minItems = [...ordered];\n  let maxItems = [...ordered];\n\n  maxItems.shift();\n  minItems.pop();\n\n  minItems.forEach((item) => {\n    min += item;\n  })\n\n  maxItems.forEach((item) => {\n    max += item;\n  })\n\n  console.log(min, max);\n}\n\n\nminiMaxSum([7, 69, 2, 221, 8974]);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "299 9271",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "![image](img/screencapture-hackerrank-challenges-apple-and-orange-problem-2023-01-27-17_52_49.png)"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "/*\n * Complete the 'countApplesAndOranges' function below.\n *\n * The function accepts following parameters:\n *  1. INTEGER s\n *  2. INTEGER t\n *  3. INTEGER a\n *  4. INTEGER b\n *  5. INTEGER_ARRAY apples\n *  6. INTEGER_ARRAY oranges\n */\n\nfunction countApplesAndOranges(s, t, a, b, apples, oranges) {\n  const fallenFruit = [0, 0];\n\n  apples.forEach((apple) => {\n    const fall = apple + a;\n    if (fall >= s && fall <= t) {\n      fallenFruit[0] = fallenFruit[0] + 1\n    }\n  })\n\n  oranges.forEach((orange) => {\n    const fall = orange + b;\n    if (fall >= s && fall <= t) {\n      fallenFruit[1] = fallenFruit[1] + 1\n    }\n  })\n\n  console.log(fallenFruit[0]);\n  console.log(fallenFruit[1]);\n}\n\ncountApplesAndOranges(7 ,10, 4, 12, [2, 3, -4], [3, -2, -4])"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "6",
+                                "7",
+                                "0",
+                                "1",
+                                "2",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

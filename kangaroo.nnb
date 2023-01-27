@@ -1,0 +1,29 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "![image](img/screencapture-hackerrank-challenges-kangaroo-problem-2023-01-27-17_57_17.png)"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "function kangaroo(x1, v1, x2, v2) {\n  const jumps = Array(10000).fill(0);\n  let pos1 = x1;\n  let pos2 = x2;\n  let meet = false;\n\n  jumps.forEach((_) => {\n    pos1 = pos1 + v1;\n    pos2 = pos2 + v2;\n\n    if (pos1 === pos2) meet = true;\n  });\n\n  return meet ? 'YES' : 'NO';\n}\n\nkangaroo(0, 3, 4, 2);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[32m'YES'\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

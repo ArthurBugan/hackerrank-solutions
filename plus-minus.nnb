@@ -1,0 +1,32 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "![image](img/screencapture-hackerrank-challenges-plus-minus-problem-2023-01-27-17_58_54.png)"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function plusMinus(arr) {\n  const positive = [];\n  const negative = [];\n  const zero = [];\n\n  arr.forEach((item) => {\n    if (Math.sign(item) === 1) {\n      positive.push(item);\n    } else if (Math.sign(item) === 0) {\n      zero.push(item);\n    } else {\n      negative.push(item);\n    }\n  })\n\n  console.log((positive.length / arr.length).toFixed(6));\n  console.log((negative.length / arr.length).toFixed(6));\n  console.log((zero.length / arr.length).toFixed(6));\n}\n\nplusMinus([-4, 3, -9, 0, 4, 1])"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "0.500000",
+                                "0.333333",
+                                "0.166667",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "![image](img/screencapture-hackerrank-challenges-staircase-problem-2023-01-27-17_59_35.png)"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function staircase(n) {\n  const length = n;\n  const stair = [];\n\n  Array(length).fill(0).forEach((_, index) => {\n    let currentLine = Array(length).fill(\" \");\n    Array(index + 1).fill(\"#\").forEach((item, innerIndex) => {\n      currentLine[length - innerIndex - 1] = item;\n    });\n\n    stair[index] = currentLine;\n  })\n\n  stair.forEach((i) => {\n    console.log(i.toString().replaceAll(\",\", \"\"));\n  })\n}\n\n\nstaircase(6);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "     #",
+                                "    ##",
+                                "   ###",
+                                "  ####",
+                                " #####",
+                                "######",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

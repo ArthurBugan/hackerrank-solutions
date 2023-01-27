@@ -1,0 +1,29 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "![image](img/screencapture-hackerrank-challenges-between-two-sets-problem-2023-01-27-17_55_11.png)"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "function getTotalX(a, b) {\n  let max = Math.max(...b);\n  let count = 0;\n  let multiplication: number[] = []\n\n  a.forEach(el => {\n    let result = 0;\n    while(result < max) {\n      result += el;\n      multiplication.push(result);\n    }\n  });\n\n  let division: number[] = [];\n\n  b.forEach((el) => {\n    for(let i = el; i > 0; i--) {\n      if (el % i == 0) {\n        division.push(i);\n      }\n    }\n  })\n\n  const numbers = [...multiplication, ...division];\n  const obj: any = {};\n\n  numbers.forEach((el) => {\n    obj[el] = (obj[el] || 0) + 1\n  })\n\n  Object.keys(numbers).forEach((key) => {\n    if (obj[key] === (a.length + b.length)) {\n      count++\n    }\n  })\n\n  return count;\n}\n\ngetTotalX([2, 6], [24, 36]);"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "text/plain",
+                            "value": [
+                                "\u001b[33m2\u001b[39m"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

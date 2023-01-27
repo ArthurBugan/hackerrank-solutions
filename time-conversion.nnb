@@ -1,0 +1,37 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "![image](img/screencapture-hackerrank-challenges-time-conversion-problem-2023-01-27-18_00_04.png)"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "typescript",
+            "source": [
+                "function timeConversion(s) {\n  let [hour, minute, second] = s.replace(/[A-Z]/g, \"\").split(\":\");\n\n  if (s.includes(\"PM\") && hour == 12) {\n    hour = \"12\";\n  }\n\n  if (s.includes(\"AM\") && hour == 12) {\n    hour = '00';\n  }\n\n  if (s.includes(\"PM\") && hour != 12) {\n    hour = parseInt(hour) + 12;\n  }\n\n  return `${hour}:${minute}:${second}`;\n}\n\ntimeConversion(\"07:45:54AM\");\n\nconsole.log(019 < 020)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "1 true",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "typescript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}

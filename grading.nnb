@@ -1,0 +1,30 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "![image](img/screencapture-hackerrank-challenges-grading-problem-2023-01-27-17_56_46.png)"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "/*\n * Complete the 'gradingStudents' function below.\n *\n * The function is expected to return an INTEGER_ARRAY.\n * The function accepts INTEGER_ARRAY grades as parameter.\n */\n\nfunction gradingStudents(grades) {\n  grades = grades.map((g) => {\n    const rounded =  Math.ceil(g / 5) * 5;\n\n    if (g < 38) return g;\n    if (rounded - g >= 3) return g;\n\n    \n    return rounded;\n  });\n\n  return grades;\n}\n\ngradingStudents([73, 67, 38, 33])"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 75, 67, 40, 33 ]",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
